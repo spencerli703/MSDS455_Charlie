@@ -30,7 +30,7 @@ scale_color_continuous_heart <- function(){
 }
 ##################################
 
-theme_heart <- function(base_size = 20, base_family = "Gill Sans",
+theme_heart <- function(base_size = 20, base_family = "Helvetica",
                           base_line_size = base_size / 42,
                           base_rect_size = base_size / 42) {
   # Starts with theme_bw and remove most parts
@@ -47,7 +47,7 @@ theme_heart <- function(base_size = 20, base_family = "Gill Sans",
       legend.background = element_blank(),
       legend.key        = element_blank(),
       legend.title = element_blank(),
-      panel.background  = element_rect(fill = whitesmoke,size = 0.25),
+      panel.background   = element_blank(),
       panel.border      = element_blank(),
       strip.background  = element_blank(),
       plot.title = element_text(color = blue_heart, face = "bold"),
