@@ -42,7 +42,7 @@ theme_heart <- function(base_size = 20, base_family = "Helvetica",
   ) %+replace%
     theme(
       axis.ticks      = element_blank(),
-      axis.text       = element_text(size = 16),
+      axis.text       = element_text(size = 16,color=blue_heart),
       axis.title = element_text(color = blue_heart),
       legend.background = element_blank(),
       legend.key        = element_blank(),
