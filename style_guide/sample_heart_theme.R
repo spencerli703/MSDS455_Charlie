@@ -4,7 +4,7 @@ require(ggthemes)
 ## theme
 
 # https://material.io/design/color/the-color-system.html#tools-for-picking-colors
-pal_heart <- c("#FF8A80", "#D50000", "#FF1744",  "#FF5252", "#B71C1C")
+pal_heart <- c("#FF8A80", "#D50000", "#FF1744",  "#FF5252", "#B71C1C","#7f0000")
 blue_heart <- "#3F69AA"
 
 ############# color pieces!
