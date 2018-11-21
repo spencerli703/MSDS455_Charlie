@@ -99,3 +99,22 @@ ggplot_object <- ggplot(data=plot_data,
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 print(ggplot_object)
 dev.off()
+
+setwd("~/Documents/GradSchool/MSDS455/git_repos/MSDS455_Charlie/data")
+data <- read.table(file="slide7_Prevention_w_Exercise.csv",sep=",",stringsAsFactors=FALSE,header=TRUE,quote="'")
+
+setwd("~/Documents/GradSchool/MSDS455/git_repos/MSDS455_Charlie/visualizations")
+pdf(file = "slide_7_prevention_w_exercise.pdf", 
+    width = 8, height = 10, paper = "letter")  
+ggplot_object <- ggplot(data=data,
+                        aes(x=Gender, y=CHD_Reduction_leisure)) +
+  geom_bar(aes(fill = Gender), position = "dodge", stat="identity") +
+  theme_heart() +
+  scale_fill_heart() +
+  ggtitle(wrapper("Percentage Reduction in Coronary Heart Disease Events Due to Leisure Time Physical Activity",width=55)) +
+  xlab("Gender") + 
+  ylab("Percent Reduction") +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
+  theme(legend.position="none")
+print(ggplot_object)
+dev.off()
