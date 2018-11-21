@@ -45,7 +45,7 @@ theme_heart <- function(base_size = 20, base_family = "Helvetica",
   ) %+replace%
     theme(
       axis.ticks      = element_blank(),
-      axis.text       = element_text(size = 16),
+      axis.text       = element_text(size = 16,color=blue_heart),
       axis.title = element_text(color = blue_heart),
       legend.background = element_blank(),
       legend.key        = element_blank(),
@@ -104,7 +104,7 @@ setwd("~/Documents/GradSchool/MSDS455/git_repos/MSDS455_Charlie/data")
 data <- read.table(file="slide7_Prevention_w_Exercise.csv",sep=",",stringsAsFactors=FALSE,header=TRUE,quote="'")
 
 setwd("~/Documents/GradSchool/MSDS455/git_repos/MSDS455_Charlie/visualizations")
-pdf(file = "slide_7_prevention_w_exercise.pdf", 
+pdf(file = "slide_7_prevention_w_exercise.png", 
     width = 8, height = 10, paper = "letter")  
 ggplot_object <- ggplot(data=data,
                         aes(x=Gender, y=CHD_Reduction_leisure)) +
